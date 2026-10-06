@@ -26,6 +26,13 @@
     >
 
     <link rel="stylesheet" href="style.css">
+
+    <!--
+        BEFORE DEPLOYING:
+        1. Replace YOUR_GMAIL@gmail.com with your real Gmail address.
+        2. Replace YOUR_FORM_ID with the Formspree form ID.
+        3. Keep resume.pdf in this same folder.
+    -->
 </head>
 
 <body>
@@ -47,6 +54,8 @@
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
+                <a href="resume.pdf" download>Resume</a>
+                <a href="mailto:YOUR_GMAIL@gmail.com">Gmail</a>
 
             </nav>
 
@@ -102,15 +111,15 @@
 
                     <div class="social-links">
 
-                        <a href="https://github.com/shabarishbijoor" target="_blank">
+                        <a href="https://github.com/shabarishbijoor" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-github"></i>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/shabarishbijoor/" target="_blank">
+                        <a href="https://www.linkedin.com/in/shabarishbijoor/" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
 
-                        <a href="https://www.instagram.com/shabarishhh21/" target="_blank">
+                        <a href="https://www.instagram.com/shabarishhh21/" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
 
@@ -495,7 +504,13 @@
 </a>
 <div class="contact-form" id="contact-form">
 
-    <form>
+    <form
+        id="contactForm"
+        action="https://formspree.io/f/mljgdekq"
+        method="POST"
+    >
+
+        <input type="hidden" name="_subject" value="New Portfolio Contact Message">
 
         <div class="form-group">
             <label for="name">Name</label>
@@ -530,10 +545,12 @@
             ></textarea>
         </div>
 
-        <button type="submit" class="btn primary-btn">
+        <button type="submit" class="btn primary-btn" id="submitBtn">
             Send Message
             <i class="fa-solid fa-paper-plane"></i>
         </button>
+
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
 
     </form>
 
@@ -559,21 +576,43 @@
             </div>
 
             <p>
-                Designed & Built by Shabarish
+                © 2026 Shabarish. All rights reserved.
             </p>
 
             <div class="footer-socials">
 
-                <a href="https://github.com/shabarishbijoor" target="_blank">
+                <a
+                    href="https://github.com/shabarishbijoor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
                     <i class="fa-brands fa-github"></i>
                 </a>
 
-                <a href="https://www.linkedin.com/in/shabarishbijoor/L" target="_blank">
+                <a
+                    href="https://www.linkedin.com/in/shabarishbijoor/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
-                <a href="https://www.instagram.com/shabarish.bijoor/" target="_blank">
+                <a
+                    href="https://www.instagram.com/shabarishhh21/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
                     <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="mailto:shabarish.career@gmail.com"
+                    aria-label="Gmail"
+                >
+                    <i class="fa-solid fa-envelope"></i>
                 </a>
 
             </div>
